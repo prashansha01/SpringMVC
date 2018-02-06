@@ -12,6 +12,10 @@
 
 <h2>Woohooo!!! Admission details processed. Here are the details</h2>
 
-Student name : ${student1.studentName} and id: ${student1.studentId}
+Student name : ${student1.studentName}  <br>
+Student id: ${student1.studentId} <br>
+Student dob : ${student1.studentDob}  <br>
+Student mobile : ${student1.studentMobile}  <br>
+Student Skills : ${student1.studentSkills}  <br>
 </body>
 </html>

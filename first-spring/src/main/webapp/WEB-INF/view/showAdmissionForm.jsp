@@ -13,6 +13,15 @@
 <table>
 <tr><td>Name: </td><td><input type = "text" name = "studentName"></td><tr>
 <tr><td>Id: </td><td><input type = "text" name = "studentId"></td> </tr>
+<tr><td>DOB: </td><td><input type = "text" name = "studentDob"></td> </tr>
+<tr><td>Mobile: </td><td><input type = "text" name = "studentMobile"></td> </tr>
+<tr><td>Skill Set: </td><td>
+<select name = "studentSkills" multiple="multiple"">
+<option value = "Java Core">Java Core</option>
+<option value = "Spring Core">Spring Core</option>
+<option value = "Spring MVC">Spring MVC</option>
+</select>
+</td> </tr>
 
 <tr><td><input type = "submit" value = "Submit"></td></tr>
 
