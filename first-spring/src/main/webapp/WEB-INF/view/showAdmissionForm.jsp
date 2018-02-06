@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<form action = "/course-api/submitStudentAdmissionForm" method="post">
+<h2>${pageHeader}</h2>
+<form action = "/first-spring/submitStudentAdmissionForm" method="post">
 <h2>Enter Student information here</h2>
 <table>
 <tr><td>Name: </td><td><input type = "text" name = "studentName"></td><tr>

@@ -7,8 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<h2>${pageHeader}</h2>
+
 <h2>Woohooo!!! Admission details processed. Here are the details</h2>
 
-Student name : ${name} and id: ${id}
+Student name : ${student1.studentName} and id: ${student1.studentId}
 </body>
 </html>
