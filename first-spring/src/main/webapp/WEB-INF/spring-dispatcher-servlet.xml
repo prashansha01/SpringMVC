@@ -16,10 +16,15 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 <bean name = "/hello" class = "org.anshu.springmcv.controller.HelloController"></bean>
  -->
  
- <context:component-scan base-package="org.ps.spring.controller"></context:component-scan>
- <!-- <mvc:annotation-driven/> -->
+ <context:component-scan base-package="org.ps.spring.*"></context:component-scan>
+ <mvc:annotation-driven/>
  <bean id = "viewResolver" class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
 	<property name="prefix"><value>/WEB-INF/view/</value></property>
 	<property name="suffix"><value>.jsp</value></property>
+</bean>
+
+<bean id = "messageSource" class = "org.springframework.context.support.ReloadableResourceBundleMessageSource">
+	<property name="basename" value = "/WEB-INF/applicationMessages"></property>
+	<property name="cacheSeconds" value ="1"></property>
 </bean>
 </beans>

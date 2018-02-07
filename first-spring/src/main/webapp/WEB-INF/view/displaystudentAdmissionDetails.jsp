@@ -8,14 +8,16 @@
 </head>
 <body>
 
-<h2>${pageHeader}</h2>
+<%-- <h2>${pageHeader}</h2>
 
 <h2>Woohooo!!! Admission details processed. Here are the details</h2>
-
+ --%>
 Student name : ${student1.studentName}  <br>
 Student id: ${student1.studentId} <br>
 Student dob : ${student1.studentDob}  <br>
 Student mobile : ${student1.studentMobile}  <br>
-Student Skills : ${student1.studentSkills}  <br>
+Student Skills : ${student1.studentSkills} <br>
+Student Address: ${student1.studentAddress.city} <br> ${student1.studentAddress.pinCode}
+
 </body>
 </html>
