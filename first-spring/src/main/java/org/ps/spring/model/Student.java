@@ -3,16 +3,29 @@ package org.ps.spring.model;
 import java.util.ArrayList;
 import java.util.Date;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import org.ps.spring.validator.annotations.isValidAddress;
+
 public class Student {
+	
+	
 	private String studentName;
+	
 	@Size(min=1, max= 6)
 	private String studentId;
+	
+	
 	private Long studentMobile;
+	
+	@Past
 	private Date studentDob;
 	private String[] studentSkills;
 	//private ArrayList<String> studentSkills;
+	@isValidAddress
 	private Address studentAddress;
 	
 	public String getStudentName() {

@@ -18,6 +18,19 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
  
  <context:component-scan base-package="org.ps.spring.*"></context:component-scan>
  <mvc:annotation-driven/>
+ 
+ <mvc:interceptors>
+ 	<mvc:interceptor>
+ 		<mvc:mapping path="/greet/hi"/>
+ 		<bean class="org.ps.spring.common.DayOfWeekBasedAccessInterceptor"/>
+ 	</mvc:interceptor>
+ 	
+ 	<bean class= "org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+ 		<property name="paramName" value = "siteLanguage"></property>
+ 	</bean>
+ </mvc:interceptors>
+ 
+ 
  <bean id = "viewResolver" class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
 	<property name="prefix"><value>/WEB-INF/view/</value></property>
 	<property name="suffix"><value>.jsp</value></property>
@@ -26,5 +39,12 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 <bean id = "messageSource" class = "org.springframework.context.support.ReloadableResourceBundleMessageSource">
 	<property name="basename" value = "/WEB-INF/applicationMessages"></property>
 	<property name="cacheSeconds" value ="1"></property>
+</bean>
+
+<bean id = "localeResolver" class = "org.springframework.web.servlet.i18n.CookieLocaleResolver">
+	<property name="defaultLocale" value = "fr"></property>
+</bean>
+<bean id = "simpleMappingExceptionResolver" class = "org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+	<property name="defaultErrorView" value = "error"></property>
 </bean>
 </beans>

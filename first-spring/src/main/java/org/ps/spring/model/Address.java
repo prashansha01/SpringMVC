@@ -1,6 +1,10 @@
 package org.ps.spring.model;
 
+import javax.validation.constraints.Size;
+
 public class Address {
+	
+	@Size(min = 5, max= 20)
 	private String city;
 	private int pinCode;
 	public String getCity() {
